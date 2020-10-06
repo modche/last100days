@@ -4,7 +4,7 @@
 \alias{prec_anomaly}
 \title{Precipitation anomaly in the last 100 days for a given weather station}
 \usage{
-prec_anomaly(station, days = 100)
+prec_anomaly(station, days = 100, quiet = TRUE)
 }
 \arguments{
 \item{station}{Station name from DWD (German Weather Service)}
@@ -15,5 +15,15 @@ prec_anomaly(station, days = 100)
 A table. tbc.
 }
 \description{
-Precipitation anomaly in the last 100 days for a given weather station
+Find exact station names with \code{rdwd::findID("Berlin", exactmatch=FALSE)}.
+}
+\examples{
+prec_anomaly("Freiburg")
+prec_anomaly("Mannheim")
+prec_anomaly("Koeln-Bonn")
+prec_anomaly("Waltrop-Abdinghof")
+}
+\references{
+See detailed station list from DWD here:
+ftp://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/historical/KL_Tageswerte_Beschreibung_Stationen.txt
 }

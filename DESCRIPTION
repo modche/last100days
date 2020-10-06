@@ -20,4 +20,7 @@ Imports:
     dplyr,
     lubridate,
     janitor,
-    padr
+    padr,
+    tibble,
+    magrittr,
+    zoo

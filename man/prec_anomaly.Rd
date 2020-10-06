@@ -9,7 +9,10 @@ prec_anomaly(station, days = 100, quiet = TRUE)
 \arguments{
 \item{station}{Station name from DWD (German Weather Service)}
 
-\item{days}{How many days (backweards from today) should be considered? Delaut = 100 days.}
+\item{days}{How many days (backwards from today) should be considered? Default = 100 days.
+Values smaller than 14 days not recommended.}
+
+\item{quiet}{If \code{TRUE} (default) messages from \code{rdwd} are suppressed.}
 }
 \value{
 A table. tbc.
@@ -18,12 +21,11 @@ A table. tbc.
 Find exact station names with \code{rdwd::findID("Berlin", exactmatch=FALSE)}.
 }
 \examples{
-prec_anomaly("Freiburg")
+prec_anomaly("Freiburg", days = 365)
 prec_anomaly("Mannheim")
 prec_anomaly("Koeln-Bonn")
-prec_anomaly("Waltrop-Abdinghof")
+prec_anomaly("Waltrop-Abdinghof", days = 2000)
 }
 \references{
-See detailed station list from DWD here:
-ftp://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/historical/KL_Tageswerte_Beschreibung_Stationen.txt
+See detailed station list from DWD \href{ftp://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/historical/KL_Tageswerte_Beschreibung_Stationen.txt}{here}
 }

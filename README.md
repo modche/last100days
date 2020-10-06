@@ -23,7 +23,9 @@ The package uses the `rdwd` resources and other packages from the `tidyverse`.
 #install.packages("devtools")
 devtools::github_install("modche/last100days")
 
-# run simple example
+# ----- run a simple example-----
 library(last100days)
 prec_anomaly("Freiburg", days = 90)
 ```
+
+The table then shows the precipitation amount in the last 90 days and the precipitation amount in all corresponding periods in past years (number of years depends on station data). \`ratio\` just gives the ratio between this year precipitation in the last 90 days and all other periods in other years.

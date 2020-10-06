@@ -67,9 +67,9 @@
 <blockquote>
 <p>How abnormal was the weather in the last 100 days?</p>
 </blockquote>
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
+<div id="introduction" class="section level3">
+<h3 class="hasAnchor">
+<a href="#introduction" class="anchor"></a>Introduction</h3>
 <p>Do you know these statements: “Oh, this summer was the driest I have ever seen in my life!” or “The rainfall amount in the last two weeks is absolutely a new record”.</p>
 <p>Hmm… I always have the impression that our memory is really biased towards recent weather events, i.e. every new season seems to be extreme in case of precipitation or temperature and a comparison with the past is seldom done.</p>
 <p>The R package <code>last100days</code> calculates the anomaly of some climate variables for a given location and a given period.</p>
@@ -78,6 +78,18 @@
 <li><p>locations: German weather stations from the German Weather Service (DWD)</p></li>
 </ul>
 <p>The package uses the <code>rdwd</code> resources and other packages from the <code>tidyverse</code>.</p>
+</div>
+<div id="installation" class="section level3">
+<h3 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h3>
+<pre class="{r}"><code># ----- package installation  -----
+#install.packages("devtools")
+devtools::github_install("modche/last100days")
+
+# ----- run a simple example-----
+library(last100days)
+prec_anomaly("Freiburg", days = 90)</code></pre>
+<p>The table then shows the precipitation amount in the last 90 days and the precipitation amount in all corresponding periods in past years (number of years depends on station data). `ratio` just gives the ratio between this year precipitation in the last 90 days and all other periods in other years.</p>
 </div>
 </div>
   </div>

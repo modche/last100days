@@ -89,7 +89,182 @@ devtools::github_install("modche/last100days")
 # ----- run a simple example-----
 library(last100days)
 prec_anomaly("Freiburg", days = 90)</code></pre>
-<p>The table then shows the precipitation amount in the last 90 days and the precipitation amount in all corresponding periods in past years (number of years depends on station data). `ratio` just gives the ratio between this year precipitation in the last 90 days and all other periods in other years.</p>
+<p>The table then shows the precipitation amount in the last 90 days and the precipitation amount in all corresponding periods in past years (number of years depends on station data). <code>ratio</code> just gives the ratio between this year precipitation in the last 90 days for a give year and the average precipitation sum in the period for all years.</p>
+<table class="table">
+<thead><tr class="header">
+<th align="left">mess_datum</th>
+<th align="right">rain_daily</th>
+<th align="right">period</th>
+<th align="right">prec_period</th>
+<th align="right">doy</th>
+<th align="right">prec_mean</th>
+<th align="right">ratio</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1874-10-06</td>
+<td align="right">0.8</td>
+<td align="right">90</td>
+<td align="right">278.1</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.0404949</td>
+</tr>
+<tr class="even">
+<td align="left">1875-10-06</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">264.8</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.9907337</td>
+</tr>
+<tr class="odd">
+<td align="left">1876-10-05</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">387.1</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.4483120</td>
+</tr>
+<tr class="even">
+<td align="left">1877-10-06</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">260.4</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.9742714</td>
+</tr>
+<tr class="odd">
+<td align="left">1878-10-06</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">415.7</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.5553172</td>
+</tr>
+<tr class="even">
+<td align="left">1879-10-06</td>
+<td align="right">0.3</td>
+<td align="right">90</td>
+<td align="right">353.4</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.3222254</td>
+</tr>
+<tr class="odd">
+<td align="left">1971-10-06</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">207.1</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.7748525</td>
+</tr>
+<tr class="even">
+<td align="left">2002-10-06</td>
+<td align="right">9.6</td>
+<td align="right">90</td>
+<td align="right">297.3</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.1123305</td>
+</tr>
+<tr class="odd">
+<td align="left">1901-10-06</td>
+<td align="right">10.8</td>
+<td align="right">90</td>
+<td align="right">347.2</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.2990285</td>
+</tr>
+<tr class="even">
+<td align="left">1881-10-06</td>
+<td align="right">4.9</td>
+<td align="right">90</td>
+<td align="right">445.5</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.6668122</td>
+</tr>
+<tr class="odd">
+<td align="left">1998-10-06</td>
+<td align="right">1.9</td>
+<td align="right">90</td>
+<td align="right">265.9</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.9948493</td>
+</tr>
+<tr class="even">
+<td align="left">2020-10-05</td>
+<td align="right">0.8</td>
+<td align="right">90</td>
+<td align="right">170.0</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.6360450</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-10-06</td>
+<td align="right">6.6</td>
+<td align="right">90</td>
+<td align="right">176.6</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.6607386</td>
+</tr>
+<tr class="even">
+<td align="left">2016-10-05</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">113.1</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.4231570</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-10-06</td>
+<td align="right">0.6</td>
+<td align="right">90</td>
+<td align="right">268.8</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">1.0056995</td>
+</tr>
+<tr class="even">
+<td align="left">2018-10-06</td>
+<td align="right">0.0</td>
+<td align="right">90</td>
+<td align="right">128.5</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.4807752</td>
+</tr>
+<tr class="odd">
+<td align="left">2019-10-06</td>
+<td align="right">6.8</td>
+<td align="right">90</td>
+<td align="right">262.0</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.9802577</td>
+</tr>
+<tr class="even">
+<td align="left">2020-10-05</td>
+<td align="right">0.8</td>
+<td align="right">90</td>
+<td align="right">170.0</td>
+<td align="right">279</td>
+<td align="right">267.2767</td>
+<td align="right">0.6360450</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
   </div>

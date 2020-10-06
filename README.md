@@ -2,7 +2,7 @@
 
 > How abnormal was the weather in the last 100 days?
 
-## Introduction
+### Introduction
 
 Do you know these statements: "Oh, this summer was the driest I have ever seen in my life!" or "The rainfall amount in the last two weeks is absolutely a new record".
 
@@ -15,3 +15,15 @@ The R package `last100days` calculates the anomaly of some climate variables for
 -   locations: German weather stations from the German Weather Service (DWD)
 
 The package uses the `rdwd` resources and other packages from the `tidyverse`.
+
+### Installation
+
+```{r}
+# ----- package installation  -----
+#install.packages("devtools")
+devtools::github_install("modche/last100days")
+
+# run simple example
+library(last100days)
+prec_anomaly("Freiburg", days = 90)
+```
